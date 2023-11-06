@@ -1,0 +1,12 @@
+<div *ngFor="let cuenta of cuentasBancarias">
+  <div>
+    <strong>Número de Cuenta:</strong> {{ cuenta.numeroCuenta }}
+  </div>
+  <div>
+    <strong>Tipo de Cuenta:</strong> {{ cuenta.tipo }}
+  </div>
+  <div>
+    <strong>Saldo:</strong> {{ cuenta.saldo | currency }}
+  </div>
+  <hr>
+</div>

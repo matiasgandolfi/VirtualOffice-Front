@@ -1,0 +1,59 @@
+<form (ngSubmit)="onSubmit(usuarioForm)" #usuarioForm="ngForm">
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="usuario.nombre" required>
+  </div>
+  <div class="form-group">
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido" [(ngModel)]="usuario.apellido" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" [(ngModel)]="usuario.email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" [(ngModel)]="usuario.password" required>
+  </div>
+  <div class="form-group">
+    <label for="tipo">Tipo</label>
+    <select id="tipo" name="tipo" [(ngModel)]="usuario.tipo">
+      <option value="null">Seleccionar</option>
+      <option value="admin">Administrador</option>
+      <option value="user">Usuario</option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="usuarioForm.invalid">Crear Usuario</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngFor="let usuario of usuarios">
+  <div>
+    <strong>Nombre:</strong> {{ usuario.nombre }}
+  </div>
+  <div>
+    <strong>Apellido:</strong> {{ usuario.apellido }}
+  </div>
+  <div>
+    <strong>Email:</strong> {{ usuario.email }}
+  </div>
+  <hr>
+</div>

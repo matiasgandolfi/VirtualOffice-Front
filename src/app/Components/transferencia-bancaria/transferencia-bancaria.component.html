@@ -1,0 +1,19 @@
+
+<!-- ------------------------------------------------- -->
+
+
+
+
+
+<div>
+  <h3>Transferencias Recientes</h3>
+  <ul>
+    <li *ngFor="let transferencia of transferencias">
+      ID: {{ transferencia.id }}
+      Origen: {{ transferencia.cuentaOrigenId }}
+      Destino: {{ transferencia.cuentaDestinoId }}
+      Monto: {{ transferencia.monto }}
+      Fecha: {{ transferencia.fecha | date }}
+    </li>
+  </ul>
+</div>
